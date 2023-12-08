@@ -1,0 +1,78 @@
+<html>
+<head>
+<title>Page Title</title>
+<link rel="stylesheet" href="index.css">
+
+</head>
+<body>
+
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+
+
+  		<h1>Real Estate</h1>
+
+
+
+  <form action="?action=save" name="myform" method="post">
+
+  <h2>Sign Up</h2>
+  <dl>
+
+    <dt>Username</dt>
+    <dd>
+      <input type="text" size="35" maxlength="30" name="username" value="---username---">
+      <br></br>
+    </dd>
+
+    <dt>Email Address</dt>
+    <dd>
+      <input type="text" size="35" maxlength="30" name="email-address" value="---email address---">
+      <br></br>
+    </dd>
+
+    <dt>Password</dt>
+    <dd>
+      <input type="text" size="35" maxlength="30" name="password" value="---password---">
+      <br></br>
+    </dd>
+
+    <dt>Confirm Password</dt>
+    <dd>
+      <input type="text" size="35" maxlength="30" name="confirm-password" value="---confirm Password---">
+      <br></br>
+    </dd>
+
+<p>Are you a user or admin?</p>
+  <input type="radio" id="user-type" name="user-type" value="user-type">
+  <label for="user">User</label>
+  <input type="radio" id="user-type" name="user-type" value="user-type">
+  <label for="admin">Admin</label>
+<br></br>
+<br></br>
+
+<p>Are you a buyer or seller?</p>
+  <input type="radio" id="buyer" name="buyer" value="buyer">
+  <label for="buyer">Buyer</label>
+  <input type="radio" id="buyer" name="buyer" value="buyer">
+  <label for="seller">Seller</label><br>
+
+
+  </dl>
+  <input type="submit" name="submit" value="submit">
+
+</form>
+
+  <?php
+  $action = $_GET["action"];
+  $myText = $_POST["username"];
+
+
+  if($action = "save") {
+    $targetFolder = "/path/to/folder";
+    file_put_contents($targetFolder."mytext.txt", $myText);
+  }
+  ?>
+
+</body>
+</html>
