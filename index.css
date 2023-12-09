@@ -46,10 +46,24 @@ input[type=radio], select {
   border-radius: 4px;
   box-sizing: border-box;
 }
-
+p a{
+  color: purple;
+  border: none;
+  background-color: white;
+}
 a{
   background-color: #b0b0b0;
   padding: 12px 20px;
   margin: 8px 0;
   border: solid 2px #707070;
+}
+.contact{
+  text-align: centerA;
+}
+.linkContainer{
+  position: absolute;
+  top: 50px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
 }
