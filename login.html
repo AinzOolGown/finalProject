@@ -2,7 +2,6 @@
 <head>
 <title>Login Page</title>
 <link rel="stylesheet" href="index.css">
-
 </head>
 <body>
 
@@ -15,47 +14,25 @@
   <br><br><br><br>
   <h1>Real Estate</h1>
 
-
-
-  <form action="?action=save" name="myform" method="post">
-
-  <h2>Login</h2>
-  <dl>
-
-    <dt>Email Address</dt>
-    <dd>
-      <input type="text" size="35" maxlength="30" name="email-address" value="---email address---">
-      <br></br>
-    </dd>
-
-    <dt>Password</dt>
-    <dd>
-      <input type="text" size="35" maxlength="30" name="password" value="---password---">
-      <br></br>
-    </dd>
-  </dl>
-  <p> Don't have an account? <a href="signupform.html">Signup</a> </p>
-  <p>Forgot your password? <a href="forgot_password.html">Reset Password</a></p>
-  <input type="submit" name="submit" value="submit">
-
-</form>
-
-<br>
-    <div class="contact">
-        <h3>Contact us!</h3>
-        Feel free to contact us via the following email: TESTING@gmail.com
+  <form action="process_login.php" method="post">
+    <h2>Login</h2>
+    <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" class="form-control">
     </div>
 
-  <?php
-  $action = $_GET["action"];
-  $myText = $_POST["username"];
+    <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="text" id="password" name="password" class="form-control">
+    </div>
+    
+    <p> Don't have an account? <a href="signupform.html">Signup</a> </p>
+    <p>Forgot your password? <a href="forgot_password.html">Reset Password</a></p>
 
-
-  if($action = "save") {
-    $targetFolder = "/path/to/folder";
-    file_put_contents($targetFolder."mytext.txt", $myText);
-  }
-  ?>
+    <div class="form-group">
+        <input type="submit" value="Login" class="btn btn-primary">
+    </div>
+  </form>
 
 </body>
 </html>

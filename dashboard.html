@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Property Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="dashboard">
+        <div id="addPropertyCard" class="property-card">
+            <span>+</span>
+            <p>Add New Property</p>
+        </div>
+    </div>
+	
+	<form id="addPropertyForm" action="add_property.php" method="post" enctype="multipart/form-data" class = "modal">
+		<div class="modal-content">
+			<span class="close">&times;</span>
+				<h2>Add New Property</h2>
+				<input type="text" id="location" name="location" placeholder="Location" required>
+				<input type="number" id="age" name="age" placeholder="Age of Property" required>
+				<input type="text" id="floorPlan" name="floorPlan" placeholder="Floor Plan (e.g., 3 BHK, 1500 sqft)" required>
+				<input type="number" id="bedrooms" name="bedrooms" placeholder="Number of Bedrooms" required>
+				<input type="number" id="bathrooms" name="bathrooms" placeholder="Number of Bathrooms" required>
+				<label>
+					<input type="checkbox" id="garden" name="garden">
+					Garden
+				</label>
+				<input type="text" id="parking" name="parking" placeholder="Parking Availability" required>
+				<input type="text" id="proximity" name="proximity" placeholder="Proximity to Nearby Facilities" required>
+				<input type="text" id="mainRoads" name="mainRoads" placeholder="Proximity to Main Roads" required>
+				<input type="text" id="propertyTax" name="propertyTax" placeholder="Property Tax Records" required>
+				<input type="file" id="propertyImage" name="propertyImage" accept="image/png, image/jpeg" required>
+
+				<button type="submit">Submit</button>
+		</div>
+	</form>
+	
+	<div id="propertyDetailsModal" class="modal">
+		<div class="modal-content">
+			<span class="close" id="closePropertyDetails">&times;</span>
+			<div id="propertyDetails"></div>
+			<button class="edit-btn">Edit</button>
+		</div>
+	</div>
+	
+	<div id="updatePropertyModal" class="modal">
+		<div class="modal-content">
+			<span class="close" id="closeUpdatePropertyModal">&times;</span>
+			<form id="updatePropertyForm">
+				<h2>Update Property</h2>
+				<input type="text" id="location" name="location" placeholder="Location" required>
+				<input type="number" id="age" name="age" placeholder="Age of Property" required>
+				<input type="text" id="floorPlan" name="floorPlan" placeholder="Floor Plan (e.g., 3 BHK, 1500 sqft)" required>
+				<input type="number" id="bedrooms" name="bedrooms" placeholder="Number of Bedrooms" required>
+				<input type="number" id="bathrooms" name="bathrooms" placeholder="Number of Bathrooms" required>
+				<label>
+					<input type="checkbox" id="garden" name="garden">
+					Garden
+				</label>
+				<input type="text" id="parking" name="parking" placeholder="Parking Availability" required>
+				<input type="text" id="proximity" name="proximity" placeholder="Proximity to Nearby Facilities" required>
+				<input type="text" id="mainRoads" name="mainRoads" placeholder="Proximity to Main Roads" required>
+				<input type="text" id="propertyTax" name="propertyTax" placeholder="Property Tax Records" required>
+				<input type="file" id="propertyImage" name="propertyImage" accept="image/png, image/jpeg" required>
+				<input type="hidden" id="updatePropertyId" name="propertyId">
+				<button type="submit">Update Property</button>
+			</form>
+		</div>
+	</div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
